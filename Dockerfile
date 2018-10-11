@@ -95,6 +95,7 @@ ADD     ./grafana/export-datasources-and-dashboards.sh /src/
 # Configure nginx and supervisord
 ADD     ./nginx/nginx.conf /etc/nginx/nginx.conf
 RUN     mkdir /var/log/supervisor
+RUN     chmod 777 /var/tmp/nginx
 ADD     ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 
